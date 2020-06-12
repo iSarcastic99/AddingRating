@@ -18,16 +18,16 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('addRating')}}"method="post">
-    	<input type="text" name="UserID" placeholder="UserID" required="required" />
-        <input type="text" name="JobID" placeholder="JobID" required="required" />
-        <input type="text" name="Rating" placeholder="Rating" required="required" />
+    	<input type="text" name="userId" placeholder="UserID" required="required" />
+        <input type="text" name="jobId" placeholder="JobID" required="required" />
+        <input type="text" name="rating" placeholder="Rating" required="required" />
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Stored</button>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Store</button>
     </form>
 
    <br>
    <br>
-   {{ prediction_text }}
+   {{ DataStored }}
 
  </div>
 
