@@ -14,7 +14,6 @@ def addRating():
     isThere = False
 
     df1 = pd.read_csv('rating.csv')
-    dfjson = df1.to_json(r'./endgameRating.json')
     jobId = request.form['jobId']
     userId = request.form['userId']
     rating = request.form['rating']
@@ -50,6 +49,7 @@ def addRating():
 
         dff = df1.append(df2, ignore_index=True)
         dff.to_csv(r'./rating.csv', index=False)
+        dff.to_json(r'./endgameRating.json')
         added = "added"
         return render_template('index.html', DataStored="The rating has been stored")
 
